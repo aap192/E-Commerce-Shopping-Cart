@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <strong><a class="navbar-brand" href="/">Brand</a></strong>
+    </div>
+
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/shopping-cart/">
+       <strong> <i class="fa fa-shopping-cart"></i> Shopping Cart</strong>
+        <span class="badge">{{session.cart.totalQty}}</span>
+        </a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <strong><i class="fas fa-user"></i> User Management</strong><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          {{# if login}}
+			<li><a href="/user/profile">User Account</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/user/logout">Logout</a></li>          
+            {{else}}
+            <li><a href="/user/signup">Sign Up</a></li>  
+            <li><a href="/user/signin">Sign In</a></li>  
+          {{/if}}
+
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
