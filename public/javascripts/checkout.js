@@ -33,4 +33,5 @@ function stripeResponseHandler(status, response) {
         // and submit
         $form.get(0).submit();
     }
+	//
 }
