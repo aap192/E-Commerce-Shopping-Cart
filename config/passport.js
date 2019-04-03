@@ -48,6 +48,7 @@ passport.use('local.signup',new LocalStrategy({
 	});
 	
 }));
+//
 
 passport.use('local.signin', new LocalStrategy({
 	usernameField:'email',
