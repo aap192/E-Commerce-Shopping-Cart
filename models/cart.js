@@ -24,6 +24,7 @@ module.exports=function Cart(oldCart){
 		delete this.items[id];	
 		}
 	};
+	//
 	
 	this.removeItem=function(id){
 
