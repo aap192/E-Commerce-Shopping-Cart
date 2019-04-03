@@ -49,6 +49,7 @@ for(var i=0;i<products.length;i++)
 
 	});
 }
+//
 
 function exit(){
 	mongoose.disconnect();
